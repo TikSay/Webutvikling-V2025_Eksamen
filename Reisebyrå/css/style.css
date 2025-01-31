@@ -254,7 +254,10 @@ main{
     align-items: center;
     padding: 40px 20px;
 }
-
+#grid-container, main {
+height: auto !important;
+overflow: visible !important;
+}
 #ads {
     display: flex;
     justify-content: center;
@@ -587,29 +590,71 @@ header nav{
 }
 
 .breadcrumb nav{
-    background: #0095ff;
-    padding: 10px;
-    color: white;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1ca2c1;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
-.breadcrumb a{
-    color: white;
+.breadcrumb nav a {
     text-decoration: none;
-    margin-right: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.breadcrumb nav a i {
+    font-size: 12px;
+    color: white;
+}
+.breadcrumb a:first-child i {
+    display: none; 
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
 }
 
 
 .booking{
-    max-width: 500px;
+    max-width: 700px;
     margin: 20px auto;
     padding: 20px;
-    background: #f5f1e8;
+    background: #F7F5F2; 
     border-radius: 10px;
 }
-
+.booking input, .booking select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    outline: none;
+}
 form{
     display: flex;
     flex-direction: column;
+    gap: 15px;
+}
+form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+form input, form select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    outline: none;
 }
 
 fieldset{
@@ -636,19 +681,40 @@ input, select{
 .dob{
     display: flex;
     justify-content: space-between;
+    gap: 10px;
+}
+.dob select {
+    flex: 1;
+}
+
+.gender {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.gender label {
+    display: flex;
+    align-items: center;
     gap: 5px;
 }
 
+.gender input[type="radio"] {
+    width: 18px;
+    height: 18px;
+}
+
 .neste{
-    background-color: #ffcc00;
+    background-color: #f7b800;
     color: black;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
     font-weight: bold;
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
     margin-top: 20px;
 }
 .neste:hover{
@@ -656,192 +722,205 @@ input, select{
 }
 
 
-footer.footer {
-    background-color: #1e1e1e !important;
-    color: white !important;
-    padding: 50px 20px !important;
-    font-family: Arial, sans-serif !important;
-    text-align: center !important;
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    box-sizing: border-box !important;
-    margin-top: auto !important;
-    clear: both !important;
-    position: relative !important;
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
-footer .footer-container {
-    max-width: 1100px !important;
-    width: 100% !important;
-}
+
 footer .flagg {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-wrap: wrap !important;
-    gap: 15px !important;
-    width: 100% !important;
-    max-width: 600px !important;
-    background: none !important;
-    padding: 10px 0 !important;
-    margin-bottom: 20px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
-footer .flagg p {
-    background: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
+
 footer .flagg img {
-    width: 35px !important;
-    height: auto !important;
-    vertical-align: middle !important;
+    width: 35px;
+    height: auto;
 }
 
 footer .betalingsmetoder {
-    text-align: center !important;
-    margin-bottom: 30px !important;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 footer .betalingsmetoder h2 {
-    font-size: 18px !important;
-    font-weight: bold !important;
-    margin-bottom: 10px !important;
-    text-transform: uppercase !important;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 footer .betalingsmetoder img {
-    display: inline-block !important;
-    margin: 0 10px !important;
-    height: 25px !important;
-    vertical-align: middle !important;
+    height: 25px;
+    margin: 0 10px;
+}
+footer section {
+    background-color: transparent !important;
+    color: white !important;
+    width: 100%;
+    max-width: 900px;
 }
 
 footer .nyheter {
-    display: flex !important;
-    justify-content: space-between !important;
-    flex-wrap: wrap !important;
-    align-items: flex-start !important;
-    max-width: 900px !important;
-    width: 100% !important;
-    margin: 0 auto 30px !important;
-    text-align: left !important;
-    gap: 20px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+    flex-wrap: wrap;
 }
 
-footer .nyheter-tilbud,
+footer .nyheter-tilbud, 
 footer .kundeservice {
     flex: 1 !important;
-    min-width: 320px !important;
+    min-width: 300px !important;
+    max-width: 50% !important;
 }
-footer .nyheter-tilbud h2,
-footer .kundeservice h2 {
-    font-size: 18px !important;
-    font-weight: bold !important;
-    margin-bottom: 10px !important;
-    text-transform: uppercase !important;
+
+
+footer .nyheter-tilbud h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 footer .nyheter-tilbud form {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    border: 2px solid white !important;
-    border-radius: 5px !important;
-    background-color: white !important;
-    max-width: 400px !important;
-    width: 100% !important;
-    padding: 5px !important;
-    box-sizing: border-box !important;
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    background: transparent;
 }
 
-footer .nyheter-tilbud label {
-    font-size: 14px !important;
-    color: white !important;
-    display: block !important;
-    margin-bottom: 5px !important;
-}
 
 footer .nyheter-tilbud input {
-    border: none !important;
-    padding: 12px !important;
-    font-size: 14px !important;
-    outline: none !important;
-    background: white !important;
-    color: black !important;
-    flex-grow: 1 !important;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    background: white;
+    color: black;
+    flex-grow: 1;
+    border-radius: 5px 0 0 5px;
 }
 footer .nyheter-tilbud button {
-    background-color: #f7b800 !important;
-    color: black !important;
-    border: none !important;
-    padding: 10px 15px !important;
-    font-size: 14px !important;
-    font-weight: bold !important;
-    cursor: pointer !important;
-    border-radius: 5px !important;
-    white-space: nowrap !important;
+    background-color: #f7b800;
+    color: black;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0;
 }
-footer .nyheter-tilbud p a {
-    color: white !important;
-    text-decoration: none !important;
-    font-size: 14px !important;
-    display: block !important;
-    text-align: center !important;
-    margin-top: 10px !important;
-}
+
 
 footer .nyheter-tilbud button:hover {
     background-color: #ffcc00 !important;
 }
 
+footer .nyheter-tilbud p a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer .nyheter-tilbud form {
+    height: auto;
+    margin-bottom: 0;
+}
+
+footer .nyheter-tilbud, footer .kundeservice {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+footer .kundeservice {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+    width: auto !important;
+}
+footer .kundeservice h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
 footer .kundeservice ul {
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 footer .kundeservice li {
-    margin-bottom: 5px !important;
+    margin-bottom: 5px;
 }
 
 footer .kundeservice a {
-    color: white !important;
-    text-decoration: none !important;
-    font-size: 14px !important;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 footer .kundeservice a:hover {
-    text-decoration: underline !important;
+    text-decoration: underline;
 }
 
 
 footer .bottom {
-    margin-top: 30px !important;
+    margin-top: 30px;
 }
 footer .sosialemedier {
-    margin-top: 30px !important;
+    margin-top: 30px;
 }
 
 footer .sosialemedier h2 {
-    font-size: 18px !important;
-    font-weight: bold !important;
-    margin-bottom: 10px !important;
-    text-transform: uppercase !important;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 
 footer .sosialemedier i {
-    font-size: 24px !important;
-    margin: 0 10px !important;
-    color: white !important;
-    transition: color 0.3s !important;
+    font-size: 24px;
+    margin: 0 10px;
+    color: white;
 }
 
 footer .sosialemedier i:hover {
-    color: #f7b800 !important;
+    color: #f7b800;
 }
+
+footer .nyheter, footer .betalingsmetoder, footer .sosialemedier {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
 
 @media (max-width: 768px) {
     .nav-links {
@@ -875,8 +954,13 @@ footer .sosialemedier i:hover {
         padding: 10px 15px;
     }
     footer .nyheter {
-        flex-direction: column !important;
-        text-align: center !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .nyheter-tilbud, 
+    footer .kundeservice {
+        max-width: 100% !important;
     }
 
     footer .nyheter-tilbud form {
@@ -950,5 +1034,8 @@ footer .sosialemedier i:hover {
         bottom: 5%;
         right: 5%;
         padding: 10px 15px;
+    }
+    footer .nyheter {
+        flex-direction: row;
     }
 }
