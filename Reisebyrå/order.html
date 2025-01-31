@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="ikoner/css/fontawesome.css" rel="stylesheet">
+    <link href="ikoner/css/brands.css" rel="stylesheet">
+    <link href="ikoner/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> 
+    <title>Resiebyrå | Bestill</title>
+</head>
+<body>
+    <div id="grid-container">
+      <header id="global-header">
+        <nav>
+            <img src="img/fav.png" alt="logo" class="logo">
+            <div class="ikoner">
+                <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="user"><i class="fa-solid fa-user"></i></button>
+                <button class="meny"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+    <main>
+      <section class="breadcrumb">
+        <nav>
+          <a href="#"><i class="fa-solid fa-angle-right" style="color: #ffffff;"></i>Søk</a>
+          <a href="#"><i class="fa-solid fa-angle-right" style="color: #ffffff;"></i>Søkeresultater</a>
+          <a href="#"><i class="fa-solid fa-angle-right" style="color: #ffffff;"></i>Romtype</a>
+          <a href="#"><i class="fa-solid fa-angle-right" style="color: #ffffff;"></i>Fly</a>
+          <a href="#"><i class="fa-solid fa-angle-right" style="color: #ffffff;"></i>Tilleggsvalg</a>
+        </nav>
+      </section>
+      <section class="booking">
+        <h1>Oppi dine bestillingsopplysninger</h1>
+        <form>
+          <fieldset>
+            <legend>Voksen 18+ Hovedbestiller</legend>
+
+            <label for="fornavn">Fornavn (ifølge pass):</label>
+            <input type="text" id="fornavn" name="fornavn" required>
+
+            <label for="etternavn">Etternavn (ifølge pass):</label>
+            <input type="text" id="etternavn" name="etternavn" required>
+
+            <label for="dob">Fødselsdato:</label>
+            <input type="date" required id="dob">
+            <fieldset class="gender">
+              <legend>Kjønn</legend>
+              <label><input type="radio" name="kjønn" value="kvinne">Kvinne</label>
+              <label><input type="radio" name="kjønn" value="mann">Mann</label>
+            </fieldset>
+
+            <label for="email">E-postadresse:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="phone">Telefonnummer:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="adressse">Gateadresse:</label>
+            <input type="text" id="adresse" name="adresse">
+
+            <label for="zip">Postnummer:</label>
+            <input type="text" id="zip" name="zip">
+
+            <label for="by">Poststed:</label>
+            <input type="text" id="by" name="by">
+
+            <label for="land">Land:</label>
+            <select id="land">
+              <option>Velg et land</option>
+              <option>Norge</option>
+              <option>Danmark</option>
+              <option>Nederland</option>
+              <option>Hellas</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Voksen 18+</legend>
+            <label for="fornavn">Fornavn (ifølge pass):</label>
+            <input type="text" id="fornavn" name="fornavn" required>
+
+            <label for="etternavn">Etternavn (ifølge pass):</label>
+            <input type="text" id="etternavn" name="etternavn" required>
+
+            <label for="dob">Fødselsdato:</label>
+            <input type="date" required id="dob">
+            <fieldset class="gender">
+              <legend>Kjønn</legend>
+              <label><input type="radio" name="kjønn" value="kvinne">Kvinne</label>
+              <label><input type="radio" name="kjønn" value="mann">Mann</label>
+            </fieldset>
+            <button type="submit" class="neste">Siste trinn<i class="fa-solid fa-arrow-right"></i></button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+        <footer class="footer">
+          <section class="flagg">
+              <div class="land">
+                  <p>
+                      <img src="flags/sweden.png" alt="Sverige flagg"> Sverige
+                      <img src="flags/denmark.png" alt="Danmark flagg"> Danmark
+                      <img src="flags/norway.png" alt="Norsk flagg"> Norge
+                      <img src="flags/material.png" alt="Samisk flagg"> Suomi
+                      <img src="flags/netherlands.png" alt="Nederland flagg"> Nederland
+                  </p>
+              </div>
+          </section>
+          <section class="betalingsmedoter">
+              <article class="betal-metode">
+                  <h2>BETALLINGSMETODER</h2>
+                  <p>
+                      <i class="fa-brands fa-cc-visa"></i>
+                      <i class="fa-brands fa-cc-mastercard"></i>
+                      <i class="fa-brands fa-cc-paypal"></i>
+                      <i class="fa-brands fa-apple-pay"></i>
+                      <i class="fa-brands fa-amazon-pay"></i>
+                  </p>
+              </article>
+          </section>
+          <section class="nyheter">
+              <article class="nyheter-tilbud">
+                  <h2>NYHETER & TILBUD</h2>
+                  <form>
+                      <label for="email">Meld deg på nyhetsbrev her</label>
+                      <input type="email" id="email" placeholder="ola@example.com...">
+                      <button type="submit">Send</button>
+                  </form>
+                  <p><a href="#">Kjøp reisegavekort</a></p>
+              </article>
+              <article class="kundeservice">
+                  <h2>KUNDESERVICE</h2>
+                  <ul>
+                      <li><a href="#">Spørsmål og Svar</a></li>
+                      <li><a href="#">Chat</a></li>
+                      <li><a href="#">Kontakt</a></li>
+                      <li><a href="#">Tilgjengelighetserklæring</a></li>
+                  </ul>
+              </article>
+          </section>
+          <section class="bottom">
+              <article class="sosialemedier">
+                  <h2>SOSIALE MEDIER</h2>
+                  <p>
+                      <i class="fa-brands fa-instagram"></i>
+                      <i class="fa-brands fa-facebook"></i>
+                      <i class="fa-brands fa-pinterest"></i>
+                      <i class="fa-brands fa-tiktok"></i>
+                      <i class="fa-brands fa-youtube"></i>
+                  </p>
+              </article>
+          </section>
+      </footer>
+  </body>
+</html>
